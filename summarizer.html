@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <title>Text Summarizer Algorithm</title>
+        
+	<script src = "js/jquery-2.0.0.js"></script>
+        
+        <!--<script src = "js/clone_array.js"></script>
+        <script src = "js/create_term_table.js"></script>
+        <script src = "js/extra_filtering.js"></script>
+        <script src = "js/final_term_table.js"></script>
+        <script src = "js/GLOBALS.js"></script>
+        <script src = "js/inverse_sentence_distribution.js"></script>
+        <script src = "js/inverse_sentence_frequencies_from_terms.js"></script>
+        <script src = "js/pageRanks_from_wordWeights.js"></script>
+        <script src = "js/readtxtfile.js"></script>
+        <script src = "js/reveal_docs.js"></script>
+        <script src = "js/round_decimal.js"></script>
+        <script src = "js/sentences_from_doc.js"></script>
+        <script src = "js/show_similarities.js"></script>
+        <script src = "js/similarity_between_sentences.js"></script>
+        <script src = "js/sizeOf.js"></script>
+        <script src = "js/sorting.js"></script>
+	<script src = "js/spin.js"></script>
+        <script src = "js/summarize.js"></script>
+	<script src = "js/term_distribution.js"></script>
+	<script src = "js/term_frequencies_from_terms.js"></script>
+	<script src = "js/terms_from_sentences.js"></script>
+	<script src = "js/word_weight_from_TDandISD.js"></script>
+	<script src = "js/word_weights_from_TFandISF.js"></script>
+        <script src = "js/words_count.js"></script>-->
+	
+	<script src = "js/GLOBALS.js"></script>
+        <script src = "js/readtxtfile.js"></script>
+	<script src = "js/replacements.js"></script>
+        <script src = "js/reveal_docs.js"></script>
+	<script src = "js/spin.js"></script>
+	<script src = "js/summarize.js"></script>
+	
+	<script>
+
+	    window.onerror = function(msg, url, linenumber){
+		alert('Error message: '+msg+'\nURL: '+url+'\nLine Number: '+linenumber);
+		return true;
+	    };
+	    
+	    window.onload = function(){
+                
+		// initialize all textareas
+		document.getElementById("doc").value = readtxtfile("docs/doc.txt");
+		for (var i = 2; i < GLOBALS.doc_count+1; i++) {
+		    var new_doc = document.createElement("div");
+		    new_doc.innerText = "Doc" + i + "\n" + readtxtfile("docs/doc" + i + ".txt") + "\n\n";
+		    new_doc.id = "doc" + i;
+		    new_doc.style.background = "white";
+		    document.getElementById("other_docs").appendChild(new_doc);
+		    document.getElementById("other_docs").innerHTML += "<br>";
+		}
+                
+	    };
+            
+	</script>
+    </head>
+    <body style = 'margin: 0;'>
+	<div id = "main" style = 'width: 98%; min-height: 500px; float: left; background: yellow;'>
+	    <div>
+		Select method of summarization:
+		<select>
+		    <option>Absolute</option>
+		    <option selected>Percentage</option>
+		</select>
+	    </div>
+	    <div id = "Absolute" style = 'background: green;'>
+		Choose number of desired sentences:
+		<input type = "text" min = "1" value = "all">
+	    </div>
+	    <div id = "Percentage" style = 'background: green;'>
+		Choose percentage to keep:
+		<input id = "maxSentenceCount" type = "number" min = "1" max = "100" value = "50">%
+	    </div>
+	    <button onclick = "summarize()">Summarize</button><br>
+	    <span><strong>Title (optional)</strong></span>
+	    <textarea id = "title" rows = '1' placeholder = "optional title" style = 'width: 100%; resize: none;'>OpShop: One of the Media Prototypes from Northwestern's Journalism and Computer Science Department</textarea>
+	    <span><strong>Doc1 (main doc)</strong></span>
+	    <textarea id = "doc" rows = '20' placeholder = 'place text to be summarized here' style = 'width: 100%; resize: vertical;'></textarea><br><br>
+	    
+	    <span><strong>Other Docs</strong></span>
+	    <button onclick = "reveal_docs()">Show/Hide Other Docs</button>
+	    <div id = "other_docs" style = "display: none;"></div>
+	</div>
+
+	<div style = 'width: 98%; min-height: 500px; float: left; background: orange;'>
+	    <div>
+		Reading time(s): <span id = "reading_time"></span><br>
+		Number of sentences: <span id = "sentence_count"></span><br>
+		Number of words: <span id = "word_count"></span><br>
+		Number of retained sentences: <span id = "retained_sentences"></span><br>
+	    </div>
+	    <br><span><strong>Summary</strong></span><br>
+	    <textarea id = "summary" rows = '20' placeholder = 'summary' readonly style = 'width: 100%; resize: vertical;'></textarea>
+	    
+	    <br><br><span><strong>Terms (organized)</strong></span><br>
+	    <div id = "organized_terms" style = "background: white;"></div>
+	</div>
+    </body>
+</html>

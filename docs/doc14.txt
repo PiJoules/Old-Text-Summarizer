@@ -1,0 +1,37 @@
+If that was, in fact, how they pulled it off - and investigators appear to be looking at that theory - it illustrates just how vulnerable big corporations have become as they expand and connect their computer networks to other companies to increase convenience and productivity.
+
+Fazio Mechanical Services, a contractor that does business with Target, said in a statement Thursday that it was the victim of a "sophisticated cyberattack operation," just as Target was. It said it is cooperating with the Secret Service and Target to figure out what happened.
+
+The statement came days after Internet security bloggers identified the Sharpsburg, Pa., company as the third-party vendor through which hackers penetrated Target's computer systems.
+
+Target has said it believes hackers broke into its vast network by first infiltrating the computers of one of its vendors. Then the hackers installed malicious software in Target's checkout system for its estimated 1,800 US stores.
+
+Experts believe the thieves gained access during the busy holiday season to about 40 million credit and debit card numbers and the personal information - including names, email addresses, phone numbers and home addresses - of as many as 70 million customers.
+
+Cybersecurity analysts had speculated that Fazio may have remotely monitored heating, cooling and refrigeration systems for Target, which could have provided a possible entry point for the hackers. But Fazio denied that, saying it uses its electronic connection with Target to submit bills and contract proposals.
+
+The new details illustrate what can go wrong with the far-flung computer networks that big companies increasingly rely on.
+
+"Companies really have to look at the risks associated with that," said Ken Stasiak, CEO of SecureState, a Cleveland firm that investigates data breaches. Stasiak said industry regulations require companies to keep corporate operations such as contracts and billing separate from consumer financial information.
+
+Stasiak emphasized that the thieves would have still needed to do some serious hacking to move through Target's network and reach the checkout system.
+
+Chester Wisniewski, an adviser for the computer security firm Sophos, said that while it may seem shocking that Target's systems are that connected, it is a lot cheaper for a company to manage one network rather than several.
+
+He added that while retailers are supposed to keep consumer information separate, they are not required to house it on a separate network.
+
+Still, he said he was extremely surprised to hear that the hackers may have gotten in via a billing system, saying those kinds of connections are supposed to provide extremely limited access to the other company's network.
+
+As a result, while the hackers were clearly talented, it's obvious something went wrong on Target's end, he said.
+
+"If normal practices were followed, they wouldn't have been able to get access," Wisniewski said.
+
+Secret Service spokesman Brian Leary confirmed that investigators are looking into the attack at Fazio Mechanical Services, but wouldn't provide details. Molly Snyder, spokeswoman for Minneapolis-based Target, would not comment.
+
+Federal prosecutors in Pittsburgh referred calls to their counterparts in Minnesota, who would not discuss the investigation.
+
+In the weeks since Target disclosed the breach, banks, credit unions and other card companies have canceled and reissued cards, closed accounts and refunded credit card holders for transactions made with the stolen data.
+
+The Consumer Bankers Association said that its members have replaced over 17.2 million debit and credit cards as a result of the Target breach, at a cost of over $172 million.
+
+Target has said its customers won't be responsible for any losses.
